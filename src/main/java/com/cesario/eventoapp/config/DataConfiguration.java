@@ -24,10 +24,10 @@ public class DataConfiguration {
     @Bean
     public JpaVendorAdapter jpaVendorAdapter(){
         HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
-        adapter.setDatabase(Database.MYSQL);
+        adapter.setDatabase(Database.POSTGRESQL);
         adapter.setShowSql(true);
         adapter.setGenerateDdl(true);
-        adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
+        adapter.setDatabasePlatform("org.hibernate.dialect.PostgreSQL11");
         adapter.setPrepareConnection(true);
         return adapter;
     }
